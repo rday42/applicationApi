@@ -23,10 +23,13 @@ function pays(){
                 if((paysSaisi.toLowerCase() == countries[country].name.common.toLowerCase()) || (paysSaisi.toLowerCase() == countries[country].translations.fra.common.toLowerCase())){
                     document.getElementById("paysId").innerHTML = `<p style="color: #c0392b;">Pays</p>
                                                                    <p>${countries[country].name.common} / ${countries[country].name.official} / ${countries[country].translations.ara.official} </p>`;
+                    
                     document.getElementById("continent").innerHTML = `<p style="color: #c0392b;">Continent</p>
                                                                       <p>${countries[country].continents}</p>`;
+                    
                     document.getElementById("capital").innerHTML = `<p style="color: #c0392b;">Capital</p>
                                                                     <p>${countries[country].capital}</p>`;
+                    
                     document.getElementById("drapeau").innerHTML = `<p style="color: #c0392b;">Drapeau</p>
                                                                     <img src="${countries[country].flags.png}" />`;
 
@@ -42,10 +45,13 @@ function pays(){
                     document.getElementById("langages").innerHTML = `<p style="color: #c0392b;">Langues officielles</p>                                                                    
                                                                     ${sousLangue}`;
                     
+                    // On utilise toLocaleString('fr-FR') pour formater le nombre avec des espaces comme séparateurs de milliers
                     document.getElementById("population").innerHTML = `<p style="color: #c0392b;">Population</p>
-                                                                       <p>${countries[country].population}</p>`;
+                                                                       <p>${countries[country].population.toLocaleString('fr-FR')}</p>`;    
+                    
                     document.getElementById("carteMaps").innerHTML = `<p style="color: #c0392b;">Carte Maps</p>
                                                                       <a href=${countries[country].maps.googleMaps} target="_blank">${countries[country].maps.googleMaps}</a>`;
+                    
                     document.getElementById("carteOpenStreetMaps").innerHTML = `<p style="color: #c0392b;">Carte Open Street Maps</p>
                                                                                 <a href=${countries[country].maps.openStreetMaps} target="_blank">${countries[country].maps.openStreetMaps}</a>`;
                     
