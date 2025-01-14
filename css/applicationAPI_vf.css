@@ -1,0 +1,74 @@
+.divPrincipal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /*padding-top: 5%;*/
+    background-color: DodgerBlue;
+}
+
+.conteneur {
+    /*Pour aligner verticalement les sous-divs de "conteneur" */
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    width: 500px;
+    margin : auto;
+    padding-top: 10px;
+    background-color: LightGray;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.chercherPays {
+    position: relative;
+    height: 50px;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.infoPays {
+    float: left;
+    position: relative;
+    /*height: 80px;*/
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #f4f6f6;
+    border-radius: 5px;
+    padding: 5px;
+    
+    text-transform: uppercase;  /*convertir le texte en majuscules */
+    display: none; /* Rendre les sous-divs invisibles */
+
+}
+
+.titre {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.pays  {
+    position: relative;
+    height: 50px;
+    width: 80%;
+    float: left;
+    border-radius: 5px 0px 0px 5px; /* Values apply => first : top-left corner, second : top-right corner, third : bottom-right corner, fourth : bottom-left corner */
+    border-style: none;
+    padding-left: 10px; /* Ajouter un espace avant le texte */
+}
+
+.cherche {
+    position: relative;
+    height: 50px;
+    width: 20%;
+    float: right;
+    border-radius: 0px 5px 5px 0px;
+    border-style: none;
+    background-color: #e9eee8;
+}
+
